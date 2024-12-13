@@ -20,10 +20,34 @@ class SpeechToText:
         try:
             print("Processing speech...")
             text = self.recognizer.recognize_google(audio)
-            return text
+            return self.process_command(text)
         except sr.RequestError:
             return "API unavailable"
         except sr.UnknownValueError:
-            return "Unable to recognize speech"
+            return "Unable to recognize speech. Can you repeat?"
         except Exception as e:
             return f"Error: {str(e)}"
+
+    def process_command(self, text):
+        """
+        Process the recognized text and map it to TurtleBot commands
+        Returns: str - response based on the command
+        """
+        commands = {
+            "turn right": "Turning right",
+            "turn left": "Turning left",
+            "move forward": "Moving forward",
+            "move backward": "Moving backward",
+            "stop": "Stopping"
+        }
+
+        for command, response in commands.items():
+            if command in text.lower():
+                return response
+
+        return "Command not recognized. Can you repeat?"
+
+# Example usage
+if __name__ == "__main__":
+    stt = SpeechToText()
+    print(stt.listen_and_convert())
