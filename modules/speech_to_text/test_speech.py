@@ -1,5 +1,10 @@
+import sys
+import os
 
-from modules.stt.speech_to_text import SpeechToText
+# Add the root directory to sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+
+from modules.speech_to_text.speech_to_text import SpeechToText
 
 def main():
     stt = SpeechToText()

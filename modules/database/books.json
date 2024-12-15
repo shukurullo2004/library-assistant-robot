@@ -1,0 +1,47 @@
+{
+    "Clean Code": {
+        "title": "Clean Code: A Handbook of Agile Software Craftsmanship",
+        "author": "Robert C. Martin",
+        "imprint": "Upper Saddle River, NJ : Prentice Hall, c2009.",
+        "description": "xxix, 431 p. : ill. ; 24 cm.",
+        "isbn": "0132350882",
+        "call_number": "005.1 C623c",
+        "location": "Aisle 3, Shelf 2"
+    },
+    "The Pragmatic Programmer": {
+        "title": "The Pragmatic Programmer: Your Journey to Mastery",
+        "author": "Andrew Hunt, David Thomas",
+        "imprint": "Boston, MA : Addison-Wesley, c2019.",
+        "description": "xxxi, 321 pages : illustrations ; 24 cm.",
+        "isbn": "0135957052",
+        "call_number": "005.1 H939p",
+        "location": "Aisle 3, Shelf 3"
+    },
+    "Design Patterns": {
+        "title": "Design Patterns: Elements of Reusable Object-Oriented Software",
+        "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+        "imprint": "Boston, MA : Addison-Wesley, c1995.",
+        "description": "xvii, 395 p. : ill. ; 24 cm.",
+        "isbn": "0201633612",
+        "call_number": "005.1 G187d",
+        "location": "Aisle 3, Shelf 4"
+    },
+    "Refactoring": {
+        "title": "Refactoring: Improving the Design of Existing Code",
+        "author": "Martin Fowler",
+        "imprint": "Boston, MA : Addison-Wesley, c2019.",
+        "description": "xxii, 418 pages : illustrations ; 24 cm.",
+        "isbn": "0134757599",
+        "call_number": "005.1 F785r",
+        "location": "Aisle 3, Shelf 5"
+    },
+    "Clean Architecture": {
+        "title": "Clean Architecture: A Craftsman's Guide to Software Structure and Design",
+        "author": "Robert C. Martin",
+        "imprint": "Upper Saddle River, NJ : Prentice Hall, c2018.",
+        "description": "xii, 432 pages : illustrations ; 24 cm.",
+        "isbn": "0134494164",
+        "call_number": "005.1 M379c",
+        "location": "Aisle 3, Shelf 6"
+    }
+}
