@@ -1,5 +1,7 @@
 import os
-import openai
+from openai import OpenAI
+
+client = OpenAI(api_key=self.api_key)
 
 class NLPModule:
     def __init__(self, api_key, database):
@@ -7,7 +9,6 @@ class NLPModule:
         Initialize the NLP module with OpenAI API key and book database.
         """
         self.api_key = api_key
-        openai.api_key = self.api_key
         self.database = database
 
     def process_text(self, text):
@@ -20,13 +21,11 @@ class NLPModule:
         """
         try:
             # Use OpenAI API to extract book title
-            response = openai.Completion.create(
-                engine="text-davinci-003",
-                prompt=f"Identify the book title from this query: '{text}'. Return only the title.",
-                max_tokens=50,
-                temperature=0.5,
-            )
-            book_title = response["choices"][0]["text"].strip()
+            response = client.completions.create(engine="text-davinci-003",
+            prompt=f"Identify the book title from this query: '{text}'. Return only the title.",
+            max_tokens=50,
+            temperature=0.5)
+            book_title = response.choices[0].text.strip()
             
             # Search the book database
             if book_title in self.database:
